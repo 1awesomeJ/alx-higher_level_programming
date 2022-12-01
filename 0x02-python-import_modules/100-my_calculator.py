@@ -28,3 +28,4 @@ if __name__ == "__main__":
             calc.div(int(argv[0]), int(argv[2]))))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
