@@ -2,9 +2,8 @@
 
 if __name__ == "__main__":
     import hidden_4
-#    argv = sys.argv[1:]
+    words = dir(hidden_4)
 
- #   sum = 0
-    for a in hidden_4:
-        #sum += int(a)
-        print("{:s}".format(a))
+    for a in words:
+        if a[:2] != '__':
+            print("{:s}".format(a))
