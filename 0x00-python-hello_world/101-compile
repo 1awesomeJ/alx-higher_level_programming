@@ -1,9 +1,2 @@
 #!/bin/bash
-echo"
-import py_compile
-import os
-
-source = os.environ['PYFILE']
-dest = source + 'c'
-
-py_compile.compile(source, cfile=dest)" | python3
+python3 -m compileall -b $PYFILE
