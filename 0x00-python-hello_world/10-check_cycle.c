@@ -5,7 +5,8 @@ int check_cycle(listint_t *list)
 {
    	listint_t *temp, *check, *current;
     	int i,j;
-
+	if (list == NULL)
+		return (0);
 	temp = current = list;
  	i = j = 0;
 
