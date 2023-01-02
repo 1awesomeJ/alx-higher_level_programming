@@ -12,6 +12,8 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
+        if self.__height == 0 or self.__width == 0:
+            return ""
         ret = ""
         for a in range(self.__height):
             for b in range(self.__width):
