@@ -19,12 +19,9 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return ""
         ret = ""
-        for a in range(self.__height):
-            for b in range(self.__width):
-                ret += str(self.print_symbol)
-            if a is not self.__height - 1:
-                ret += ("\n")
-        return ret
+        for a in range(self.height):
+                ret += str(self.print_symbol) * self.width  + "\n"
+        return ret[:-1]
 
     def __repr__(self):
         ret = f"Rectangle({self.__width}, {self.__height})"
@@ -75,5 +72,5 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return rect_1
-        else rect_2.area() > rect_1.area():
+        else:
             return rect_2
