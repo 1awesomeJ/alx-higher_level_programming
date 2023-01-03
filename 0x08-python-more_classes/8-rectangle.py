@@ -20,7 +20,7 @@ class Rectangle:
             return ""
         ret = ""
         for a in range(self.height):
-                ret += str(self.print_symbol) * self.width  + "\n"
+            ret += str(self.print_symbol) * self.width + "\n"
         return ret[:-1]
 
     def __repr__(self):
