@@ -9,7 +9,9 @@ def add_integer(a, b=98):
     This funtion adds two numbers and returns their sum
     """
 
-    if a == float('inf'):
+    if a == float('inf') or b == float('inf'):
+        raise OverflowError("cannot convert float infinity to integer")
+    if a == -float('inf') or b == -float('inf'):
         raise OverflowError("cannot convert float infinity to integer")
     if type(a) is float:
         a = int(a)
