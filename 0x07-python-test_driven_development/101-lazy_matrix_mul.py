@@ -5,7 +5,7 @@ import numpy as mp
 
 
 def lazy_matrix_mul(m_a, m_b):
-    """This function multiplies two matrices"""
+    """This function multiplies two matrices
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     if type(m_b) is not list:
@@ -40,6 +40,7 @@ def lazy_matrix_mul(m_a, m_b):
     columns = len(m_b[0])
     if A != B:
         raise ValueError("m_a and m_b can't be multiplied")
+     """
 
     C = mp.matmul(m_a, m_b)
     return C
