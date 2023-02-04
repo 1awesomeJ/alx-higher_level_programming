@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """This function reads a text file and prints it to stdout"""
-    k = open(filename, "r")
-    print(k.read(), end="")
+    with open(filename, "r") as k:
+        print(k.read(), end="")
